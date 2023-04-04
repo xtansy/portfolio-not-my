@@ -1,0 +1,57 @@
+.michael {
+    display: flex;
+    align-items: center;
+    margin-top: 143px;
+
+    &__info {
+        max-width: 416px;
+        display: flex;
+        flex-direction: column;
+
+        &-text {
+            h1 {
+                font-weight: 700;
+                font-size: 78px;
+                line-height: 116%;
+            }
+
+            p {
+                margin-top: 24px;
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 137%;
+            }
+        }
+
+        &-skills {
+            flex-wrap: wrap;
+
+            margin-top: 50px;
+            display: flex;
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 150%;
+            gap: 20px;
+
+            &__item {
+                padding: 0px 16px;
+                min-height: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-color: $blue;
+                border-radius: 64px;
+            }
+
+            &__item:hover {
+                transition: all 0.3s ease-in-out;
+                background-color: #0961c58a;
+            }
+        }
+    }
+
+    &__image {
+        margin-left: 321px;
+    }
+}

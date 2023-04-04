@@ -1,0 +1,41 @@
+.header {
+    padding-top: 30px;
+
+    &__ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-item {
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            transition: all 1s ease-in-out;
+
+            position: relative;
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+
+            &::after {
+                content: '';
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                width: 0px;
+                height: 1px;
+                background: $primary;
+            }
+
+        }
+
+        &-logo {
+            margin-right: 647px;
+        }
+    }
+}

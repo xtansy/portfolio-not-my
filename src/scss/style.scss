@@ -1,0 +1,11 @@
+@import "./utils/*.scss";
+@import "./_variables.scss";
+@import "./_fonts.scss";
+
+@import "./components/**/*.scss";
+
+body {
+    font-family: "Montserrat";
+    background-color: #1F1F1F;
+    color: $primary;
+}

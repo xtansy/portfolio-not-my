@@ -1,0 +1,36 @@
+.projects {
+    margin-top: 51px;
+    padding-bottom: 550px;
+
+    &__title {
+        margin-top: 20px;
+    }
+
+    &__tabs {
+        margin-top: 72px;
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item {
+            cursor: pointer;
+            margin-right: 50px;
+            margin-bottom: 30px;
+
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 150%;
+            color: $secondary;
+        }
+    }
+
+    &__content {
+        display: flex;
+
+        &-title {
+            margin-right: 350px;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 55px;
+        }
+    }
+}
