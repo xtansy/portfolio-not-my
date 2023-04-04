@@ -71,8 +71,6 @@ $blue: #1378EF;
 
 .accordeon {
     width: 100%;
-
-    display: flex;
     flex-direction: column;
 
     &__item {
@@ -80,14 +78,32 @@ $blue: #1378EF;
         justify-content: space-between;
         align-items: center;
 
+        &_active {
+            display: flex;
+
+            .accordeon__item-content__title {
+                color: $blue;
+            }
+
+            .accordeon__item-content__descr {
+                display: block;
+            }
+
+            .accordeon__item-arrow img {
+                transform: rotate(-90deg);
+            }
+        }
+
         &-content {
             &__title {
                 font-weight: 700;
                 font-size: 28px;
                 line-height: 55px;
+
             }
 
             &__descr {
+                display: none;
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 170%;
@@ -98,12 +114,8 @@ $blue: #1378EF;
             cursor: pointer;
         }
     }
-}
 
-.active {
-    display: block;
-}
-
-.disable {
-    display: none !important;
+    &__item:not(:first-child) {
+        margin-top: 19px;
+    }
 }

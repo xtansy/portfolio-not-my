@@ -20,14 +20,38 @@
             font-size: 22px;
             line-height: 150%;
             color: $secondary;
+
+            &_active {
+                color: $primary;
+                position: relative;
+
+                &::after {
+                    z-index: -1;
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: -50%;
+                    width: 67px;
+                    height: 67px;
+                    background-color: $blue;
+                    border-radius: 100%;
+                }
+            }
         }
     }
 
     &__content {
-        display: flex;
+        &_active {
+            display: flex;
+        }
+
+        margin-top: 7px;
+
+        display: none;
+        justify-content: flex-start;
 
         &-title {
-            margin-right: 350px;
+            flex-basis: 50.333%;
             font-weight: 700;
             font-size: 28px;
             line-height: 55px;
