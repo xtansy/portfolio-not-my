@@ -1,0 +1,32 @@
+.discuss {
+    position: relative;
+    display: block;
+    margin: 150px auto;
+    max-width: 668px;
+    height: 316px;
+
+    &__content {
+        text-align: center;
+
+        &-subtitle {
+            cursor: pointer;
+            margin-top: 9px;
+            display: block;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }
+
+    &__round {
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        border-radius: 100%;
+        background-color: $blue;
+        z-index: -1;
+        bottom: 0%;
+    }
+}
