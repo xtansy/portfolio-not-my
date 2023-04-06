@@ -5,13 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.min.css" />
-        <script src="main.js"></script>
         <title>Document</title>
     </head>
     <body>
+        @@include("./_cursor.html")
         <div class="overlay">
             @@include("./_header.html") @@include("./_main.html")
         </div>
         @@include("./_footer.html")
     </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="main.js"></script>
 </html>
