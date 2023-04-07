@@ -5,6 +5,7 @@ import { validate } from "./modules/validate.js";
 import { scroll } from "./modules/scroll.js";
 import { cursor } from "./modules/cursor.js";
 import { canvas } from "./modules/canvas.js";
+import { modal } from "./modules/modal.js";
 
 window.addEventListener("DOMContentLoaded", () => {
     tabs(".projects__tabs", ".projects__tabs-item", ".projects__content", "projects__content_active", "projects__tabs-item_active");
@@ -27,4 +28,5 @@ window.addEventListener("DOMContentLoaded", () => {
     scroll();
     cursor();
     canvas();
+    modal();
 });
