@@ -53,5 +53,59 @@
 
     &__canvas {
         margin-left: 321px;
+
+        width: 450px;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .michael {
+        &__canvas {
+            margin-left: 0px;
+        }
+
+        justify-content: space-between;
+    }
+
+    .michael__info-text {
+        h1 {
+            font-size: 70px;
+        }
+
+        p {
+            font-size: 22px;
+        }
+    }
+
+    .michael__info-skills {
+        font-size: 14px;
+        gap: 15px;
+        margin-top: 30px;
+
+        &__item {
+            padding: 0px 9px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .michael {
+        flex-direction: column;
+        justify-content: center;
+
+        &__info {
+            max-width: none;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .michael {
+
+        &__canvas {
+            width: 320px;
+            height: 320px;
+        }
     }
 }

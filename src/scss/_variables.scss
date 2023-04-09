@@ -18,13 +18,13 @@ $primary: #FFFFFF;
 $secondary: rgba(255, 255, 255, 0.59);
 $blue: #1378EF;
 
-
-
 ._container {
-    width: $containerWidth;
+    width: 100%;
     max-width: $containerWidth;
     margin: 0 auto;
 }
+
+
 
 .name {
     font-weight: 400;
@@ -40,7 +40,7 @@ $blue: #1378EF;
 }
 
 .overlay {
-    width: $containerWidth;
+    // width: $containerWidth;
     margin: 0 auto;
     border-left: 1px solid #383838;
     border-right: 1px solid #383838;
@@ -372,5 +372,37 @@ $blue: #1378EF;
         &_two {
             transform: translate(0, -50%);
         }
+    }
+}
+
+.menu {
+    display: none;
+
+    &__line {
+        height: 5px;
+        width: 35px;
+        border-radius: 20px;
+        background-color: $primary;
+    }
+}
+
+.menu>*:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+@media screen and (max-width: 1350px) {
+    ._container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .name {
+        font-size: 17px;
+    }
+
+    .title {
+        font-size: 30px;
     }
 }

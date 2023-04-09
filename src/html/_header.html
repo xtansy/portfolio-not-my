@@ -1,9 +1,7 @@
-<header class="header _container">
-    <nav>
+<header class="header">
+    <nav class="header__nav">
+        <img class="header__nav-logo" src="./img/logo.svg" alt="logo" />
         <ul class="header__ul">
-            <li class="header__ul-logo">
-                <img src="./img/logo.svg" alt="logo" />
-            </li>
             <li class="header__ul-item">
                 <a class="link" href="#about">About</a>
             </li>
@@ -17,5 +15,6 @@
                 <a class="link" href="#contacts">Contacts</a>
             </li>
         </ul>
+        @@include("./common/_burger.html")
     </nav>
 </header>

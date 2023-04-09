@@ -8,7 +8,6 @@
     &__history {
         margin-top: 44px;
         display: flex;
-        align-items: center;
         flex-wrap: wrap;
 
         &-item {
@@ -32,6 +31,39 @@
 
             display: flex;
             flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about__history {
+        justify-content: space-between;
+    }
+
+    .about__history-item {
+        flex-basis: 34%;
+    }
+
+    .about__history-item {
+        h2 {
+            font-size: 21px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 482px) {
+    .about__history {
+        flex-direction: column;
+        justify-content: center;
+
+        &-item {
+            margin-bottom: 60px;
         }
     }
 }

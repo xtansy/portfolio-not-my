@@ -1,6 +1,12 @@
 .header {
     padding-top: 30px;
 
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__ul {
         display: flex;
         justify-content: space-between;
@@ -31,11 +37,25 @@
                 height: 1px;
                 background: $primary;
             }
-
         }
+    }
 
-        &-logo {
-            margin-right: 647px;
-        }
+    &__ul>*:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .header__nav-logo {
+        width: 170px;
+    }
+
+    .header__ul {
+        display: none;
+    }
+
+    .menu {
+        display: block;
     }
 }
