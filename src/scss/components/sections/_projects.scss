@@ -57,3 +57,34 @@
         }
     }
 }
+
+@media screen and (max-width: 830px) {
+    .projects__tabs {
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        &-item {
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+
+    .projects__content-title {
+        font-size: 22px;
+    }
+
+    .accordeon__item-content__title {
+        font-size: 20px;
+    }
+
+    .accordeon__item-content__descr {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .accordeon__item-content__descr {
+        max-width: 100px;
+    }
+}

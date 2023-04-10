@@ -6,9 +6,10 @@ import { scroll } from "./modules/scroll.js";
 import { cursor } from "./modules/cursor.js";
 import { canvas } from "./modules/canvas.js";
 import { modal } from "./modules/modal.js";
+import { burger } from "./modules/burger.js";
 
 window.addEventListener("DOMContentLoaded", () => {
-    tabs(".projects__tabs", ".projects__tabs-item", ".projects__content", "projects__content_active", "projects__tabs-item_active");
+    tabs(".projects__tabs", ".projects__tabs-item", ".projects__content", "projects__content_active");
     tabs(".accordeon", ".accordeon__item-content__title", ".accordeon__item", "accordeon__item_active");
     slider();
     phoneMask(".form__input_phone");
@@ -29,4 +30,5 @@ window.addEventListener("DOMContentLoaded", () => {
     cursor();
     canvas();
     modal();
+    burger();
 });

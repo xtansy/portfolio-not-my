@@ -48,14 +48,14 @@
 
 @media screen and (max-width: 768px) {
     .header__nav-logo {
-        width: 170px;
+        width: 150px;
     }
 
     .header__ul {
         display: none;
     }
 
-    .menu {
+    .burger {
         display: block;
     }
 }

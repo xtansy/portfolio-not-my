@@ -122,12 +122,14 @@ $blue: #1378EF;
 
 .slider {
     display: flex;
+    justify-content: space-between;
 
     &__window {
         overflow: hidden;
 
         &-container {
-            width: 860px;
+            max-width: 860px;
+            width: 100%;
             display: flex;
             transition: all 0.7s ease-in-out;
         }
@@ -139,7 +141,7 @@ $blue: #1378EF;
 
     &__item {
         flex-shrink: 0;
-        max-width: 380px;
+        max-width: 420px;
         max-height: 341px;
         background: rgba(24, 24, 24, 0.59);
         display: flex;
@@ -313,7 +315,10 @@ $blue: #1378EF;
 .modal {
     display: none;
     padding: 25px 0px;
-    min-width: 350px;
+
+    max-width: 350px;
+    width: 100%;
+
     background: #1F1F1F;
     z-index: 2;
     position: fixed;
@@ -375,7 +380,7 @@ $blue: #1378EF;
     }
 }
 
-.menu {
+.burger {
     display: none;
 
     &__line {
@@ -384,10 +389,63 @@ $blue: #1378EF;
         border-radius: 20px;
         background-color: $primary;
     }
+
+    &>*:not(:last-child) {
+        margin-bottom: 6px;
+    }
+
+    &_active {
+        position: fixed;
+        z-index: 2;
+        right: 5%;
+        transform: rotate(225deg);
+
+        .burger__line {
+            margin-bottom: 0;
+        }
+
+        .burger__line:nth-child(3) {
+            display: none;
+
+        }
+
+        .burger__line:nth-child(1) {
+            transform: rotate(90deg);
+
+        }
+
+        .burger__line:nth-child(2) {
+            transform: translate(0, -50%);
+        }
+    }
 }
 
-.menu>*:not(:last-child) {
-    margin-bottom: 6px;
+
+
+
+
+.menu {
+    display: none;
+    padding: 50px 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    &_active {
+        display: block;
+    }
+
+    &__ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 1350px) {
@@ -404,5 +462,47 @@ $blue: #1378EF;
 
     .title {
         font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .slider {
+        flex-direction: column-reverse;
+    }
+
+    .slider__arrows {
+        margin: 0;
+        margin-bottom: 20px;
+        align-self: auto;
+    }
+
+    .slider__window {
+        max-width: 820px;
+    }
+
+}
+
+@media screen and (max-width: 878px) {
+
+    .slider__window {
+        max-width: 420px;
+    }
+
+    .slider__window-container {
+        max-width: 420px;
+    }
+
+    .slider__item {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .slider__window {
+        max-width: 300px;
+    }
+
+    .slider__item {
+        max-width: 300px;
     }
 }
