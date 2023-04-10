@@ -1,4 +1,4 @@
-# :love_letter: Landing portfolio :love_letter:
+# Landing portfolio
 
 ## :globe_with_meridians: [Деплой](https://portfolio-not-my.vercel.app/)
 
