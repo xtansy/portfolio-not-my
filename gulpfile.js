@@ -27,7 +27,7 @@ const server = () => {
     });
 };
 
-const build = series(clear, parallel(html, scss, js, img, fonts));
+const build = series(clear, parallel(html, scss, js, img));
 
 const dev = series(build, parallel(watcher, server));
 
